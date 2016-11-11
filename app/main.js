@@ -1,6 +1,7 @@
 /**
  * Created by pakunert on 07.11.2016.
  */
+///<reference path="./../node_modules/@types/core-js/index.d.ts"/>
 "use strict";
 var platform_browser_dynamic_1 = require('@angular/platform-browser-dynamic');
 var app_module_1 = require('./app.module');
