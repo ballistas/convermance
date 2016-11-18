@@ -16,6 +16,7 @@ var hero_detail_component_1 = require("./hero-detail.component");
 var hero_service_1 = require("./hero.service");
 var heroes_component_1 = require("./heroes.component");
 var router_1 = require("@angular/router");
+var dashboard_component_1 = require("./dashboard.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -27,9 +28,17 @@ var AppModule = (function () {
                 router_1.RouterModule.forRoot([{
                         path: 'heroes',
                         component: heroes_component_1.HeroesComponent
-                    }])
+                    }, {
+                        path: 'dashboard',
+                        component: dashboard_component_1.DashboardComponent
+                    }, {
+                        path: '',
+                        redirectTo: '/dashboard',
+                        pathMatch: 'full'
+                    }
+                ])
             ],
-            declarations: [app_component_1.AppComponent, hero_detail_component_1.HeroDetailComponent, heroes_component_1.HeroesComponent],
+            declarations: [app_component_1.AppComponent, hero_detail_component_1.HeroDetailComponent, heroes_component_1.HeroesComponent, dashboard_component_1.DashboardComponent],
             bootstrap: [app_component_1.AppComponent],
             providers: [hero_service_1.HeroService]
         }), 

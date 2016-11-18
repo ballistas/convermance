@@ -10,7 +10,10 @@ import {HeroService} from "./hero.service";
     template:`
       <h1>{{title}}</h1>
       <h2>My Heroes</h2>
-      <a routerLink="/heroes" >Heroes</a>
+      <nav>
+        <a routerLink="/heroes" >Heroes</a>
+        <a routerLink="/dashboard">Dashboard</a>
+      </nav>
       <router-outlet></router-outlet>              
     `,
     styles:[

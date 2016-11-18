@@ -6,6 +6,7 @@ import {HeroDetailComponent} from "./hero-detail.component";
 import {HeroService} from "./hero.service";
 import {HeroesComponent} from "./heroes.component";
 import {RouterModule} from "@angular/router";
+import {DashboardComponent} from "./dashboard.component";
 
 
 @NgModule({
@@ -13,11 +14,19 @@ import {RouterModule} from "@angular/router";
         BrowserModule,
         FormsModule,
         RouterModule.forRoot([{
-            path:'heroes',
-            component:HeroesComponent
-        }])
+                path:'heroes',
+                component:HeroesComponent
+            },{
+                path:'dashboard',
+                component:DashboardComponent
+            },{
+                path:'',
+                redirectTo:'/dashboard',
+                pathMatch:'full'
+            }
+        ])
     ],
-    declarations: [AppComponent,HeroDetailComponent,HeroesComponent],
+    declarations: [AppComponent,HeroDetailComponent,HeroesComponent,DashboardComponent],
     bootstrap:    [AppComponent],
     providers:[HeroService]
 })
